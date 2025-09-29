@@ -1,0 +1,42 @@
+.main{
+    width: 100%;
+    padding: 50px 20px;
+    display: block;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: aquamarine;
+}
+
+.card{
+    width: fit-content;
+    padding: 20px;
+    background-color: aqua;
+   border-radius: 7px;
+}
+
+.info{
+    gap: 20px;
+    background-color: rgb(255, 0, 89);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+}
+
+.sub{
+    gap: 12px;
+    background-color: rgb(255, 0, 89);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+        border-radius: 7px;
+
+}
+.sub p{
+    padding: 12px 12px;
+    background-color: rgb(237, 230, 233);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+}
