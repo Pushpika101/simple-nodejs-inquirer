@@ -6,33 +6,30 @@ import { type } from 'node:os';
 let a = true;
 
 do{
-
-}while(a)
-
-inquirer.prompt([
+    inquirer.prompt([
+    
     {
-        type: 'input',
-        name: 'username is',
-        message: 'type your name'
+        type: 'password',
+        name: 'user name is',
+        message: 'select the name',
+        mask: '*',
     },
 
 
 
     {
-        type: 'list',
-        name: 'user name is',
-        message: 'select the name',
-        choices: ['amila', 'cazz', 'gg']
-    },
-
-
-
-    {
-        type: 'checkbox',
-        name: 'user name is',
-        message: 'select the name',
-        choices: ['amila', 'cazz', 'gg']
+        type: 'confirm',
+        name: 'check',
+        message: 'have any others?',
     }
 ])
-    .then(data => console.log(data))
-    .catch(err => console.log(err))
+    .then(data => {
+        console.log(data);
+        if(!data.check)
+        {
+            a = false;
+        }
+    })
+    .catch(err => console.log(err));
+}while(a);
+
