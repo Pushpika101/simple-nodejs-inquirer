@@ -5,8 +5,8 @@ import { type } from 'node:os';
 
 let a = true;
 
-do{
-    inquirer.prompt([
+const myFunction = async () => {
+  do  {const data = await inquirer.prompt([
     
     {
         type: 'password',
@@ -30,6 +30,8 @@ do{
             a = false;
         }
     })
-    .catch(err => console.log(err));
-}while(a);
+    
+}while(a)}
+
+myFunction();
 
